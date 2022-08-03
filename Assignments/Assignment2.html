@@ -6,21 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment2</title>
     <style>
-        h1{
+        body{
+            border:15px solid rgb(204, 200, 200);
+            border-top: none;
+            border-bottom: none;
+            
+        }
+        *{
+            margin: auto;
+            padding-top:10px;
+        }
+        .header h1{
             text-align: center;
-            line-height: 80vh;
         }
-        p{
+        .header p{
             text-align: center
-            /* line-height:0vh; */q
+            /* line-height:0vh; */
+
         }
+        .header{
+            background-color: rgb(204, 200, 200);
+            padding: 20px;
+            width:100%;      
+            margin-left: -2px   
+
+        }
+        .image p{
+            text-align: center;
+        }
+        .image img{
+            height: 60vh;
+            padding-left:55vh;
+        }
+        .paragraphs{
+            text-align: center;
+            background-color: rgb(204, 200, 200);
+            margin-left: -2px;
+            margin-right: -2px;
+            height:63vh
+        }
+        .paragraphs p{
+            color:black;
+        }
+        .paragraphs .p1 p
+        {
+            padding: 20px;
+        }
+        
     </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to my website</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, suscipit.</p>
+    <div class="header">
+        <h1>Welcome to my site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, assumenda.</p>
     </div>
+    <div><p><div class="image">
+        <img src="./images/image1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eaque reprehenderit sequi optio eligendi maiores provident expedita. Velit, asperiores quia?</p>
+    </div></p></div>
+    
+    <div class="paragraphs">
+        <div class="p1">
+            <p><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, nostrum.</b></p>
+        </div>
+        <div class="p2">
+            
+                <ul style="list-type:bullets;padding-left:35%;padding-right: 30%;">
+                    <li><b>paragraph -</b> broad idea Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li><b>sentences - </b>broad idea Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li><b>topic sentence -</b>broad idea Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li><b>general subject -</b>broad idea Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li><b>to relate -</b>to connect; related : connected Lorem ipsum dolor sit amet consectetur.
+                    </li>
+                    <li><b>to relate -</b>to connect; related : connected Lorem ipsum dolor sit amet consectetur.
+                        <li><b>to relate -</b>to connect; related : connected Lorem ipsum dolor sit amet consectetur.
+
+                </ul>
+            
+            <p style="width:75%;padding-top:30px"><i>"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that."</i></p>
+            <p style="padding:30px"><b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, distinctio.<a href="https://www.google.co.in/">Wikipedia Entry</a></b></p>
+        </div>
+    </div>
+
     
 </body>
 </html>

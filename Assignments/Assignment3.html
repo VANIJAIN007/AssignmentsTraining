@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment2</title>
     <style>
-        body{
+        *{
+            padding: 0px;
+            margin: auto;
+        }
+        /* body{
             background-image: url(images/lightbackground.jpg);
             background-repeat: no-repeat;
-        }
+        } */
         h1{
-            text-align: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
 
         }
-        p{
+         p{
             text-align: center;
         }
+        .content p{
+            position: absolute;
+            top:55%;
+            left:33%;
+
+        }
         .land{
-            
             height:100vh;
             position: relative;
         }
@@ -31,13 +44,18 @@
             justify-content: center;
             color:blue;
             margin-left: 28vh;
+            position: absolute;
+            top:60%;
+            margin-top: 20px;
+            left:35%;
 
         }
 
-        .container{
-            position: absolute;
-            padding-top: 35vh;
-            padding-left: 65vh;
+        .land{
+            position: relative;
+            text-align: center;
+            /* padding-top: 35vh;
+            padding-left: 65vh; */
 
         }
         .paragraphs{
@@ -54,7 +72,6 @@
         .paragraphs .p2,.p4{
             color:brown;
             padding: 20px;
-            background-color: white;
         }
         .paragraphs .p3,.p4,.p5{
             width:25vh;
@@ -62,18 +79,25 @@
             width: 30%;
             margin-top: 0px;
         }
-
+        .paragraphs .p5{
+            margin-left: 41px;
+        }
+        .paragraphs .p1{
+            margin: -5px;
+        }
         
     </style>
 </head>
 <body>
     <div class="land">
-        <div class="container"><h1>Welcome to my website</h1>
+        <img src="./images/lightbackground.jpg" alt="" style="height:100vh;width:100%">
+        <div class="content">        <h1>Welcome to my website</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, suscipit.</p>
         <div class="button">
             <button id="btn">Google</button>
 
         </div></div>
+
        
     </div>
     <div class="paragraphs">
