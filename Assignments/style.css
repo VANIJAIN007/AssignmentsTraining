@@ -131,7 +131,7 @@ aside>.box{
 }
 .borderBox{
     height:400px;
-    background-color: lightgrey;
+    background-color: lightgray;
     width:20vh;
     /* justify-content: space-around;
     flex-direction: row;
@@ -148,6 +148,7 @@ aside>.box{
 }
 .borderBox h3{
     margin-left: 10px;
+    color: black;
 }
 .borderBox p{
     padding: 10px;
@@ -291,6 +292,21 @@ button a:hover{
     display: inline-flex;
     justify-content: space-evenly;
     margin-left: 15px;
+}
+.circles .circle1 i:hover{
+    color:rgb(63, 63, 237)
+}
+.circles .circle2 i:hover{
+    color:yellowgreen;
+}
+.circles .circle3 i:hover{
+    color:blue
+}
+.circles .circle4 i:hover{
+    color:gray;
+}
+.circles .circle5 i:hover{
+    color:red;
 }
 .circles i{
     font-size: 50px;
