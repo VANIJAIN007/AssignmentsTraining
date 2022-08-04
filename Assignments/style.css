@@ -1,0 +1,317 @@
+.container{
+     /* background:linear-gradient(skyblue,white);  */
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+header img{
+    border-radius: 50%;
+    height:100px;
+
+}
+header li{
+    display: inline-flex;
+    padding:20px;
+    list-style:none ;
+    font-size: 25px;
+}
+header ul{
+    float:right;
+    justify-content: right;
+    list-style: none;
+}
+header a{
+    color:black;
+    text-decoration: none;
+
+}
+header li:hover{
+    background-color: white;
+
+}
+.container{
+    max-width: 1200px;
+    /* background-color: palevioletred; */
+    border: 2px solid red;
+    margin: auto;
+}
+header{
+    width:100%;
+    height:15vh;
+    background-color: palevioletred;
+    /* text-align: center;
+    line-height: 10vh; */
+    /* position: fixed; */
+    width:1200px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    /* background-color: aqua; */
+    height: 85vh;
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article img{
+    height:85vh;
+    width:100%;
+    
+}
+.imgContainer{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.imgBox{
+    height: 200px;
+    width: 200px;
+    background-color: orangered;
+    border-radius: 50%;
+}
+.imgBox img{
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+}
+main{
+    height:500px;
+    overflow: hidden;
+    width: 50%;
+    background-color: brown;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+
+}
+main h2{
+    margin-left: 15px;
+}
+main p{
+    padding: 20px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sec2{
+    display: flex;
+}
+aside{
+    height:500px;
+    overflow: hidden;
+    width: 45%;
+    margin-left: 40px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+aside>.box img{
+    height: 150px;
+    width: 100%;
+}
+aside>.box{
+    height: 150px;
+    /* background-color: antiquewhite; */
+    width:100%;
+
+}
+#sec3{
+    display: flex;
+}
+.borderBox{
+    height:400px;
+    background-color: lightgrey;
+    width:20vh;
+    /* justify-content: space-around;
+    flex-direction: row;
+    display: flex; */
+    width:25%;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-radius: 5%;
+    box-shadow: 2px 7px palevioletred;
+    transition: 0.3s;
+}
+.borderBox h2{
+    text-align: center;
+}
+.borderBox h3{
+    margin-left: 10px;
+}
+.borderBox p{
+    padding: 10px;
+    color:white;
+}
+.borderBox a{
+    color:white;
+    text-decoration: none;
+}
+.borderBox button{
+    width: 100%;
+    border-radius:5px;
+    height:5vh;
+    color: whitesmoke;
+    background-color: red;
+    margin-top: -7px;
+}
+.borderBox img{
+    width:100%;
+    height:150px;
+}
+footer{
+    background-color: palevioletred;
+    height:110vh;
+    width: 100%;;
+    border: 2px solid black;
+}
+
+/* .paragraphs .p1 p{
+    color:white;
+    width: 30%;
+    padding: 10px;
+}
+.paragraphs h2{
+    color:white;
+    margin-left: 20px;
+}
+.paragraphs .p2,.p3,.p4 p{
+    color:white;
+
+    
+    
+}
+.paragraphs{
+    float:left;
+} */
+/* .paragraphs{
+    width:100%;
+} */
+
+.paragraphs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 40px;
+
+    border-top: 2px solid white;
+}
+
+.img3{
+    overflow: hidden;
+}
+.img1{
+    width: 300px;
+    height:400px;
+    flex: left;
+    justify-content: left;
+}
+.paragraphs .img1{
+    color:white;
+    width:23%;
+    float:left;
+    padding: 5px;
+    /* margin-left: 20px;; */
+}
+/* .paragraphs ul{
+    float:left;
+    width:20%;
+} */
+.paragraphs .img4 h2{
+    margin-left: 20px;
+
+}
+.paragraphs .img1 p{
+    overflow: hidden;
+}
+.paragraphs li{
+    color:white;
+    list-style: none;
+}
+.paragraphs h2{
+    color:white;
+}
+button:hover{
+    background-color: goldenrod;
+    
+}
+button a:hover{
+    color:black
+}
+.Register{
+    position: relative;
+    height: 100px;
+}
+.Register h2{
+    color:white;
+    text-align: center;
+    /* position: relative; */
+
+}
+.Register button{
+    padding: 10px;
+    background-color: red;
+    border-radius:7px;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 50vh; */
+    position: absolute;
+    top:50px;
+    left:75vh;
+
+}
+.Register button:hover{
+    background-color:goldenrod
+}
+.Links{
+    height:100px;
+}
+.circles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.circles .circle1,.circle2,.circle3,.circle4,.circle5{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    /* border:2px solid white; */
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-left: 15px;
+}
+.circles i{
+    font-size: 50px;
+    color:black
+}
+.Thankyou{
+    height:100px;
+}
+.Thankyou h2,h3{
+    color:white;
+    text-align: center;
+    
+
+}
+.Thankyou a{
+    text-decoration:underline;
+    color: black;
+}
+.Thankyou a h3{
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+
+}
