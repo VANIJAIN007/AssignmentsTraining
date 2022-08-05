@@ -1,8 +1,21 @@
-.container{
-     /* background:linear-gradient(skyblue,white);  */
+html{
+    scroll-behavior: smooth;
+}
+.back{
+    background-image: url(https://images.unsplash.com/photo-1520622016800-35815b5d88b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ciUyMGdhbWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+.container li a{
+     font-family: 'Dancing Script', cursive;
+     
+}
+
+*{
+    padding: 0px;
+    margin: auto;
+    box-sizing: border-box;
 }
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dancing Script', cursive;
     color: white;
     font-size: 40px;
     text-transform: uppercase;
@@ -19,10 +32,14 @@ header li{
     list-style:none ;
     font-size: 25px;
 }
+header li i{
+    margin-right: 5px;
+}
 header ul{
     float:right;
     justify-content: right;
     list-style: none;
+    margin-left: 20px;
 }
 header a{
     color:black;
@@ -36,13 +53,14 @@ header li:hover{
 .container{
     max-width: 1200px;
     /* background-color: palevioletred; */
-    border: 2px solid red;
+    border: 2px solid purple;
     margin: auto;
 }
 header{
     width:100%;
     height:15vh;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
+    background-image: linear-gradient(purple,deeppink);
     /* text-align: center;
     line-height: 10vh; */
     /* position: fixed; */
@@ -75,7 +93,10 @@ article img{
     width: 200px;
     background-color: orangered;
     border-radius: 50%;
+    border:5px solid red
+    
 }
+
 .imgBox img{
     height:200px;
     width:200px;
@@ -85,7 +106,8 @@ main{
     height:500px;
     overflow: hidden;
     width: 50%;
-    background-color: brown;
+    /* background-color: brown; */
+    background-image: linear-gradient(purple,deeppink);
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -94,11 +116,12 @@ main{
 }
 main h2{
     margin-left: 15px;
+    font-family: 'Sacramento', cursive;
 }
 main p{
     padding: 20px;
     color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Yellowtail', cursive;
 }
 #sec2{
     display: flex;
@@ -126,12 +149,19 @@ aside>.box{
     width:100%;
 
 }
+.box:hover{
+    transform: translate(10px);
+}
+.box{
+    box-shadow: 5px 5px 2px 2px deeppink;
+}
 #sec3{
     display: flex;
 }
 .borderBox{
     height:400px;
-    background-color: lightgray;
+    /* background-color: yellowgreen; */
+    background-image: linear-gradient(deeppink,red);
     width:20vh;
     /* justify-content: space-around;
     flex-direction: row;
@@ -139,12 +169,14 @@ aside>.box{
     width:25%;
     margin-right: 15px;
     margin-left: 10px;
-    border-radius: 5%;
-    box-shadow: 2px 7px palevioletred;
+border-top-left-radius: 25px;
+border-bottom-right-radius: 12px;    
+box-shadow: 2px 7px palevioletred;
     transition: 0.3s;
 }
 .borderBox h2{
     text-align: center;
+    font-family: 'Sacramento', cursive;
 }
 .borderBox h3{
     margin-left: 10px;
@@ -153,6 +185,7 @@ aside>.box{
 .borderBox p{
     padding: 10px;
     color:white;
+    font-family: 'Yellowtail', cursive;
 }
 .borderBox a{
     color:white;
@@ -163,15 +196,29 @@ aside>.box{
     border-radius:5px;
     height:5vh;
     color: whitesmoke;
-    background-color: red;
+    /* background-color: red; */
+    background-color: black;
     margin-top: -7px;
+    margin-top: 28px;
+}
+.borderBox:hover{
+    transform: scale(1.2);
+}
+.borderBox button:hover{
+    background-color:purple ;
+    color:white;
+    color: black;
+    cursor: pointer;
 }
 .borderBox img{
     width:100%;
+    border-top-left-radius: 25px;
+border-bottom-right-radius: 12px;
     height:150px;
 }
 footer{
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
+    background-image: linear-gradient(deeppink,purple);
     height:110vh;
     width: 100%;;
     border: 2px solid black;
@@ -198,7 +245,9 @@ footer{
 /* .paragraphs{
     width:100%;
 } */
-
+footer h1{
+    margin-top: 10px;
+}
 .paragraphs{
     display: flex;
     justify-content: space-evenly;
@@ -222,30 +271,45 @@ footer{
     width:23%;
     float:left;
     padding: 5px;
+    margin-top: 20px;
     /* margin-left: 20px;; */
 }
 /* .paragraphs ul{
     float:left;
     width:20%;
 } */
+.paragraphs .img2{
+    margin-top: 25px;
+}
+.paragraphs .img3{
+    margin-top: 25px;
+}
+.paragraphs .img4{
+    margin-top: 25px;
+}
 .paragraphs .img4 h2{
     margin-left: 20px;
+    font-family: 'Sacramento', cursive;
 
 }
 .paragraphs .img1 p{
     overflow: hidden;
+    font-family: 'Yellowtail', cursive;
 }
 .paragraphs li{
     color:white;
     list-style: none;
+    font-family: 'Yellowtail', cursive;
 }
 .paragraphs h2{
     color:white;
+    font-family: 'Sacramento', cursive;
 }
 button:hover{
     background-color: goldenrod;
     
 }
+
 button a:hover{
     color:black
 }
@@ -257,22 +321,27 @@ button a:hover{
     color:white;
     text-align: center;
     /* position: relative; */
+    font-family: 'Sacramento', cursive;
+    margin-top: 10px;
 
 }
 .Register button{
     padding: 10px;
-    background-color: red;
+    background-color: black;
     border-radius:7px;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     /* margin-left: 50vh; */
     position: absolute;
     top:50px;
+    color:white;
+    font-family: 'Yellowtail', cursive;
     left:75vh;
 
 }
 .Register button:hover{
-    background-color:goldenrod
+    background-color:deeppink
 }
 .Links{
     height:100px;
@@ -282,6 +351,7 @@ button a:hover{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    margin-left: 100px;
     
 }
 .circles .circle1,.circle2,.circle3,.circle4,.circle5{
@@ -314,10 +384,13 @@ button a:hover{
 }
 .Thankyou{
     height:100px;
+    position: relative;
 }
 .Thankyou h2,h3{
     color:white;
     text-align: center;
+    margin-top: 10px;
+    font-family: 'Sacramento', cursive;
     
 
 }
@@ -329,5 +402,49 @@ button a:hover{
     text-decoration: none;
     color:black;
     font-size: 20px;
+    font-family: 'Yellowtail', cursive;
 
+}
+/* .sticky{
+    position: sticky;
+} */
+
+.sticky i{
+    font-size: 40px;
+    margin-right: 5px;
+    color:red;
+    background-color: white;
+    position: absolute;
+    right:0
+}
+
+/* @media screen and(max-width:952px){ */
+    /* .container{
+        max-width: 2490px;
+    }
+    header li{
+        padding-left: 20px
+        
+    }
+    header {
+        width:100%;
+    }
+    article img{
+        width: 100%;;
+    }
+    #sec2 main{
+        margin-left: 25px;
+    } 
+    .borderBox{
+        width: 18vh;
+    } */
+    /* header li a{
+        color:red;
+    }
+} */
+
+@media(max-width:669px){
+    footer .paragraphs .img1 p{
+        overflow: hidden;
+    }
 }
