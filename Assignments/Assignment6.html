@@ -27,6 +27,9 @@
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 30px;
         }
+        BODY{
+            background-color: pink;
+        }
     </style>
 </head>
 <body>
@@ -35,22 +38,22 @@
 
     <h1>Assignment1</h1>
     <p>Javascript </p>
-    <button type="button"onclick="document.getElementById('ttlk').innerHTML = new Date().toLocaleDateString()">
+
+    <!-- <button type="button"onclick="document.getElementById('date1').innerHTML = new Date().toLocaleDateString()">
         Display Date</button>
-        <p id="ttlk"></p>   
-        <button type="button"onclick="document.getElementById('day').innerHTML = week[date1.getDay()]">
+        <p id="date1"></p>   
+        <button type="button" onclick="document.getElementById('day').innerHTML = week[date1.getDay()]">
             Display Day</button>
             <p id="day"></p>   
             
         
         <script>
 
-            document.body.style.backgroundColor="pink"
             
 
         // var date=new Date().toLocaleDateString();
         function displayDate(){ 
-                   document.write("Today date :"+date);
+                //    document.write("Today date :"+date);
         }
     //   document.write("Today date :"+date).style.fontSize="larger";
     var date=new Date().toLocaleDateString();
@@ -63,6 +66,37 @@
             // }
 
 
+
+    </script> -->
+
+    <button type="button"onclick="displaydate()">
+        Display Date</button>
+        <p id="date1"></p> 
+        <button type="button" onclick="document.getElementById('day').innerHTML = week[date1.getDay()]">
+            Display Day</button>
+            <p id="day"></p>  
+
+    <script>
+
+        // var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("date1");
+        var today = new Date();
+        // el_up.innerHTML = today;
+
+
+  
+        function displaydate() {
+            var date = today.toJSON().slice(0, 10);
+            var nDate = date.slice(8, 10) + '/' 
+                       + date.slice(5, 7) + '/' 
+                       + date.slice(0, 4);
+            el_down.innerHTML = nDate;
+        }
+        var date=new Date().toLocaleDateString();
+
+    var date1=new Date(date);
+        var week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            // document.write("<br> Today is"+week[date1.getDay()]);
 
     </script>
 </body>

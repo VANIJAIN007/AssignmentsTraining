@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height:100px;
+            width:150px
+        }
+    </style>
+</head>
+<body style="text-align:center;"
+      id="body">
+    <!-- <h1 style="color:green;">  
+            GeeksForGeeks  
+        </h1> -->
+    <p id="GFG_UP" 
+       style="font-size: 15px;
+              font-weight: bold;">
+    </p>    <button onclick="displaydate()">
+        get Date
+    </button>
+    <p id="date1"
+       style="color:red; 
+              font-size: 30px; 
+              font-weight: bold;">
+    </p>
+    <script>
+        // var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("date1");
+        var today = new Date();
+        el_up.innerHTML = today;
+  
+        function displaydate() {
+            var date = today.toJSON().slice(0, 10);
+            var nDate = date.slice(8, 10) + '/' 
+                       + date.slice(5, 7) + '/' 
+                       + date.slice(0, 4);
+            el_down.innerHTML = nDate;
+        }
+    </script>
+</body>
+</html>
