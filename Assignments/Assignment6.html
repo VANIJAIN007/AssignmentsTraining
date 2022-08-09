@@ -13,6 +13,13 @@
         button{
             height:50px;
             width:100px;
+            border-radius: 5%;
+            background-color: palevioletred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 700px;
+            cursor: pointer;
         }
         p{
             color:red;
@@ -24,25 +31,36 @@
 </head>
 <body>
 
+        
+
     <h1>Assignment1</h1>
     <p>Javascript </p>
-    <!-- <button type="button" onclick="displayDate()">Dispay Date</button> -->
-    <script>
+    <button type="button"onclick="document.getElementById('ttlk').innerHTML = new Date().toLocaleDateString()">
+        Display Date</button>
+        <p id="ttlk"></p>   
+        <button type="button"onclick="document.getElementById('day').innerHTML = week[date1.getDay()]">
+            Display Day</button>
+            <p id="day"></p>   
+            
+        
+        <script>
 
             document.body.style.backgroundColor="pink"
             
 
         // var date=new Date().toLocaleDateString();
-        // function displayDate(){ 
-        //            document.write("Today date :"+date).style.fontSize="larger";
-        // }
+        function displayDate(){ 
+                   document.write("Today date :"+date);
+        }
     //   document.write("Today date :"+date).style.fontSize="larger";
     var date=new Date().toLocaleDateString();
- document.write("Today Date:"+date);
 
     var date1=new Date(date);
     var week=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    document.write("<br> Today is"+week[date1.getDay()]);
+    // document.write("<br> Today is"+week[date1.getDay()]);
+            // function displayDate(){
+            //     documnent.
+            // }
 
 
 
