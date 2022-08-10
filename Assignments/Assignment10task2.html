@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+</head>
+<body>
+    <script>
+        var number=Math.floor(Math.random() * 10);
+        alert("Welcome,Play the game,you have three chances");
+        for(var i=0;i<3;i++)
+        {
+            var guessNumber=parseInt(prompt("Choose a guess number between 0 to 10"));
+            if(number===guessNumber)
+            {
+                document.body.style.backgroundImage = "url('https://th.bing.com/th?q=GOP+Winning+GIF&dc=2&w=100&h=100&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247')";
+                document.body.style.backgroundRepeat="no-repeat";
+                document.body.style.backgroundSize="cover";
+                document.body.style.height="100px"
+                break;
+            }
+            else if(i==2)
+            {
+                /*document.body.style.backgroundImage = "url('../images/lost.png')";
+                document.body.style.backgroundRepeat="no-repeat";
+                document.body.style.backgroundSize="cover";
+                document.body.style.height="100px"
+                */
+               document.write("Sorry,You have lost the game")
+            }
+            else
+            {
+                alert("Sorry,You choose Wrong guess Number");
+            }
+        
+        }
+        document.body.style.backgroundImage="linear-gradient(to right,green,orange)";
+        document.body.style.color="brown";
+        document.body.style.fontSize="100px";
+        document.body.style.textAlign="center";
+        // document.body.style.textTransform="LowerCase";
+        document.body.style.textShadow="grey";
+        document.body.style.marginTop="40vh";
+        document.body.style.fontStyle="Italic";
+        document.body.style.textShadow="5px 2px green";
+        
+    </script>
+    
+
+</body>
+</html>
+

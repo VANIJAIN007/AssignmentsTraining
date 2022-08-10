@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var info={
+        name:"Vani Jain",
+        age:20,
+        address:{city:"Agra",state:"UttarPradesh",pincode:282010},
+        hobbies:["singing","programming","outdoor games"],
+        display:function(){
+            return "My name is "+this.name+" ,"+"my age is "+this.age+".</br>"+" I belongs from "+this.address.city+" in "+this.address.state+" and my pincode is "+this.address.pincode+" .</br> My hobbies are "+info.hobbies[0]+" ,"+info.hobbies[1]+" and "+info.hobbies[2];
+        }
+        };
+        document.write(info.display());
+        document.body.style.backgroundImage="linear-gradient(to right,orange,white,lightgreen)";
+        document.body.style.color="brown";
+        document.body.style.fontSize="30px";
+        document.body.style.textAlign="center";
+        // document.body.style.textTransform="LowerCase";
+        document.body.style.textShadow="2px 1px grey";
+        document.body.style.marginTop="38vh";
+        document.body.style.fontStyle="Italic";
+        document.body.style.fontWeight="5px";
+
+    </script>
+</body>
+</html>
+
+
