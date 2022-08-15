@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string1=prompt("Enter Your Sentence with spaces in between");
+        // const sentence = '  My name is       Vani  '.replace(/\s+/g, ' ').trim();
+        var sentence=string1.replace(/\s+/g,' ').trim();
+       
+console.log(sentence);
+document.write(sentence);
+
+var name=["Vani","Navya","Swati"];
+var copied=[];
+function func(){
+name.forEach(function(list){
+    copied.push(list);
+});
+}
+func();
+document.write(name);
+document.write("Copied Array");
+document.write(copied);
+console.log("Copied Array ");
+console.log(copied);
+
+
+    </script>
+</body>
+</html>
