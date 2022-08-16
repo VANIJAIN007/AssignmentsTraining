@@ -37,5 +37,45 @@ function myfunction3(a,b){
 var result=myfunction3(10,2);
 console.log(result);//with console
 
-console.log("Data Received "+myfunction3(3,7));//without console
+console.log("Data Received "+myfunction3(3,7));//without console , we not check type
+console.log(myfunction3("hi ","Vani"));
 
+function sayHi(message){
+    // if(message){
+    //     return message;
+    // }
+    // else{
+    //     return "No data received";
+    // }
+    if(!message) return;
+    else return message;
+
+}
+console.log(sayHi("Hello"));
+console.log(sayHi());
+
+function myfunction4(a,b){
+    if(b==undefined){
+         b=0;
+    }
+    return a+b;
+}
+console.log("Sum of numbers"+myfunction4(5,10));
+console.log("Sum is "+myfunction4(5));
+
+function sum(){
+    console.log(arguments.length);
+}
+sum(1,2);
+sum(1,2,2,3,4);
+sum(1,2,3,4,5,6,7,8,9);
+
+//We can also create function using constructor
+
+var myfunction4=new Function("a","b","return a+b");
+//similar to functions
+console.log("Function using constructor"+myfunction4(1,2));
+
+//to create a new Function object. it execute code globally . However if we call a constructor directly, a function is created dynamically but in a unsecured way.
+
+//Function Expression
