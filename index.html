@@ -39,16 +39,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     
     <style>
+        body{
+            background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        *{
+            padding: 0px;;
+            margin: auto;
+            box-sizing: border-box;
+        }
         table#alter tr:nth-child(even) {
             background-color: darkcyan;
+        }
+        table#alter tr:nth-child(odd){
+            color: white;
+        }
+        table{
+            height:100%;
         }
 
         table,
         td {
-            border: 2px solid;
+            border: 2px solid skyblue;
             width: 100%;
             font-size: 20px;
             ;
+            white-space: nowrap;
 
         }
 
@@ -76,6 +91,13 @@
         th#std {
             color: green;
         }
+        table td a{
+            color:white;
+            text-decoration: none;
+        }
+        table td a:hover{
+            text-shadow: 2px 2px 2px black;
+        }
     </style>
 </head>
 
@@ -96,7 +118,7 @@
         <tr>
             <td>1 Make your First Web Page Live.
             </td>
-            <td><a href="./Assignments/Assignment1.html">Information</a></td>
+            <td><a href="./Assignments/Assignment1.html">Live</a></td>
             <td>Unchecked</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
