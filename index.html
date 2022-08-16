@@ -37,7 +37,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/myscript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Dancing+Script&family=Sacramento&family=Satisfy&display=swap" rel="stylesheet">
     <style>
         body{
             background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
@@ -62,9 +64,9 @@
             border: 2px solid skyblue;
             width: 100%;
             font-size: 20px;
-            ;
+            /* text-align: center; */
             white-space: nowrap;
-
+            font-family: 'Dancing Script', cursive;
         }
 
         table {
@@ -75,17 +77,23 @@
         tr:hover {
             color: rgb(206, 197, 197);
         }
-
+        .head2 td{
+            width:35%;
+        }
         caption#a {
             background-color: rgb(23, 23, 56);
             color: white;
-            height: 40px;
+            height: 50px;
             justify-content: center;
             border-radius: 3px;
         }
+        /* caption{
+            margin-top: 20px;
+        } */
 
         th {
-            text-align: left;
+            text-align: center;
+            
         }
 
         th#std {
@@ -97,6 +105,9 @@
         }
         table td a:hover{
             text-shadow: 2px 2px 2px black;
+        }
+        td .data{
+            width: 25%;;
         }
     </style>
 </head>
@@ -111,22 +122,22 @@
         </tr>
         <tr>
             <th># Practical Name</th>
-            <th>Link</th>
-            <th>Status</th>
-            <th>Tools</th>
+            <th class="head2">Link</th>
+            <th class="head3">Status</th>
+            <th class="head4">Tools</th>
         </tr>
         <tr>
-            <td>1 Make your First Web Page Live.
+            <td> 1 Make your First Web Page Live.
             </td>
-            <td><a href="./Assignments/Assignment1.html">Live</a></td>
-            <td>Unchecked</td>
+            <td class="data"><a href="./Assignments/Assignment1.html">Live</a></td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>2 Create a Tribute page with HTML Elements and style with CSS Properties. 
             </td>
             <td><a href="./Assignments/Assignment2.html">Welcome Page </a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
@@ -134,7 +145,7 @@
             </td>
             <td><a href="./Assignments/Assignment3.html">Landing Page</a>
             </td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i>
 
             </td>
@@ -143,19 +154,19 @@
             <td>4 Create a Single Page website with following Template. 
             </td>
             <td> <a href="./Assignments/Assignment4.html">Landing Site</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>5 Create a Car Animation (or Use your own creativity).</td>
             <td><a href="./Assignments/Assignment5.html">Animation</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>6 Print the date in Format</td>
             <td> <a href="./Assignments/Assignment6.html">Display date and time</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
@@ -165,7 +176,7 @@
             </td>
             <td> <a href="./Assignments/Assignment7.html">Display name</a>
             </td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
@@ -175,9 +186,9 @@
                 Multiplication:
                 Division:
             </td>
-            <td> <a href="./Assignments/Assignment8.html">Mathematical Operations</a>
+            <td> <a href="./Assignments/Assignment8.html">Mathematical Operations  </a>
             </td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
@@ -185,7 +196,7 @@
                 .</td>
             <td> <a href="./Assignments/Assignment9.html">Execute code in Vs</a>
             </td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
@@ -193,33 +204,33 @@
             </td>
             <td> <a href="./Assignments/Assignment10.html">find sum</a>
             </td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
 
         </tr>
         <tr>
             <td>11 Write a logic to create a game called Guess the Number. </td>
             <td><a href="./Assignments/Assignment10task2.html">Guess Number</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>12  Write code to create an Object containing information .</td>
             <td><a href="./Assignments/Assignment10task3.html">Information</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>13.Kindly work on the following JavaScript Task:
             </td>
             <td><a href="./Assignments/Assingnemt11.html">Javascript Concepts</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
             <td>14.Perform programs with functions in JavaScript  </td>
             <td><a href="./Assignments/Assignment12.html">Javascript Functions</a></td>
-            <td>Unchecked</td>
+            <td>Uncheck</td>
             <td><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <!-- <tr>
