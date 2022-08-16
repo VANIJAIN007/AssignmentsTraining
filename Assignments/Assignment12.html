@@ -6,13 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-image:linear-gradient(to right,blue,skyblue);
+        /* body{
+            background-image:linear-gradient(to right,deeppink,white);
+        } */
+        h1{
+            color:purple;
+            
+
+        }
+        h2{
+            color: white;
+            text-shadow: 3px 3px 5px green;
         }
     </style>
 </head>
 <body>
     <script>
+        document.write("<h1>Task 1")
+        // document.body.style.background="linear-gradient(to right,lightgrey,white)"
+        document.body.style.background=" linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,122,0.4573179613642332) 50%, rgba(252,176,69,1) 100%)";
+        document.body.style.fontFamily="Times New Roman', Times, seriff";
+        document.body.style.textAlign="center";
         function len(){
     // "Numbers to add are "+arguments.length;
     var s=0;
@@ -23,7 +37,8 @@
         s=s+n;
     }
     console.log(s);
-    document.write(s);
+
+    document.write("<br><h2>Sum is "+s);
      
 }
 len(1,2,3,4);
@@ -31,6 +46,7 @@ len(1,2);
 
 
 //Task2
+document.write("<h1>Task 2")
 
 function Name(){
     let firstname="Vani",
@@ -41,8 +57,11 @@ function Name(){
 let name=Name();
 console.log(name[0]);
 console.log(name[1]);
+document.write("<br><h2>FirstName : "+name[0]);
+document.write("<br><h2>Last Name : "+name[1]);
 
 //Task3
+document.write("<h1>Task 3")
 
 function myfunc1(message){
     if(message){
@@ -55,13 +74,16 @@ function myfunc1(message){
 // var ms=myfunc1("Hello");
 // console.log(ms);
 console.log(myfunc1("Hello"));
+document.write("<br><h2>My Function definition : "+myfunc1("Hello"));
 
 //Task4
+
+document.write("<h1>Task 4")
 
 function checkString(str){
     var s=str;
     if(s.substring(0,4)!="New!"){
-        s="New!"+s;
+        s="New! "+s;
         return s;
     }
     else{
@@ -69,9 +91,12 @@ function checkString(str){
     }
 }
 console.log(checkString("New! abc jkwn"));
+document.write("<br><h2>My new String : "+checkString("New! abc jkwn"));
 console.log(checkString("jsbek ehbcse"));
+document.write("<br><h2>My new String : "+checkString("jsbek ehbcse"));
 
 //Task5
+document.write("<h1>Task 5")
 
 function addString(str){
     var a=str;
@@ -90,6 +115,8 @@ function addString(str){
 }
 console.log(addString("abcjndef"));
 console.log(addString("ab"));
+document.write("<br><h2>My string : "+addString("bwkjdewn"));
+document.write("<br><h2>My string : "+addString("ab"));
     </script>
 </body>
 </html>
