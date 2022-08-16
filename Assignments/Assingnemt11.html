@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        color: goldenrod;
+    }
+
+    p{
+        font-size: 30px;
+        color: yellowgreen;
+    }
+</style>
+<body>
+    <script>
+
+        var string1=prompt("Enter Your Sentence with spaces in between");
+        // const sentence = '  My name is       Vani  '.replace(/\s+/g, ' ').trim();
+        var sentence=string1.replace(/\s+/g,' ').trim();
+       
+console.log("<h2>Sentence"+sentence);
+    document.write("<h1>Task1");
+document.write("<h2>My sentence is :-"+sentence);
+
+var name=["Vani","Navya","Swati"];
+document.write("<h1>Task2");
+document.write("<br><p>My list :- "+name);
+document.write("<br><h2>Copied Array");
+
+
+var copied=[];
+function func(){
+name.forEach(function(list){
+    copied.push(list);
+});
+
+}
+document.write(copied);
+
+func();
+// document.write("<br>Copied Array");
+// document.write(copied);
+console.log(copied);
+
+
+
+var myarr=["Vani","Navya","Swati"];
+myarr.push("Hi new");
+console.log(myarr);
+document.write(myarr);
+
+var fruits=["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+console.log(fruits);
+document.write(fruits);
+
+
+    </script>
+</body>
+</html>
