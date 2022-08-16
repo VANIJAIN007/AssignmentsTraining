@@ -74,8 +74,20 @@ sum(1,2,3,4,5,6,7,8,9);
 
 var myfunction4=new Function("a","b","return a+b");
 //similar to functions
-console.log("Function using constructor"+myfunction4(1,2));
+console.log("Function using constructor "+myfunction4(1,2));
 
 //to create a new Function object. it execute code globally . However if we call a constructor directly, a function is created dynamically but in a unsecured way.
 
-//Function Expression
+//Function Expression--> it means storing function defination inside a variable is called function expression. It is also known as Anonymous Function
+
+
+//var a=10;  what we write is a statement
+//statement is similar to expression
+
+var a=function(){ //NO NAME also known as anonymous function
+    console.log("This is a function expression");
+    return "Hello VANI";
+};
+
+console.log(a());
+
