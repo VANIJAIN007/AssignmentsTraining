@@ -97,3 +97,121 @@ console.log(a());
 (function(){
     console.log("This is self Invoking function and its get called itself");
 })();
+
+
+// Function Hoisting
+
+sayHello(5,10);
+
+function sayHello(a,b){
+    console.log("Result "+(a+b));
+}
+
+// Add(5,10);
+// var Add=function(){
+//     return a+b;
+// };
+
+//Javascript Scope:Visibility of Code
+
+//There are three types of scope
+// 1. Block scope->ES5 there is no block,its available in ES6(let and const)
+// 2. Function scope->only in function
+// 3.Global scope->outside also
+
+function Scope1(){{
+    var a=10;
+
+    console.log(a);
+}
+console.log(a);//available also in this as var is a global scope
+}
+Scope1();
+
+function Scope2(){
+    var b=10;
+    console.log(b);
+}
+// console.log(b);
+
+Scope2();
+
+
+// a function which is defined inside is called callback function
+function Scope3(){
+    var b=10;
+    console.log("Inside scope3");
+
+    console.log(b);
+    function Scope4(){ 
+        var b=20;
+        console.log("Inside scope4");
+        console.log(b);
+    }
+    Scope4();
+    //console.log(b); //lexical scope ->which is tested inside a function
+}
+Scope3();
+console.log("Outside scope");
+// console.log(b);
+
+var c=30;
+function Scope5(){
+var b=10;
+console.log("Inside scope3");
+
+console.log(b);
+function Scope6(){ 
+        var b=20;
+        console.log("Inside scope4");
+        console.log(b);
+        console.log(c);
+    }
+    Scope6();
+    
+    
+}
+Scope5();
+console.log("Outside cope");
+    console.log(c);
+
+console.log("Checking ")
+    function checkvar(){
+        data=20;//without var treated as global varible
+        console.log(data);
+    }
+    checkvar();
+    console.log(data);
+
+    // console.log("Checking1 ")
+    // function checkvar(){
+    //     let data1=20;//without var treated as global varible
+    //     console.log(data1);
+    // }
+    // checkvar();
+    // console.log(data);
+
+
+    //Alias ->
+    //refersence of add function function is also stored in sum
+    //so we call the function using add() as well as sum()
+    function add(a,b){
+        return a+b;
+    }
+
+    var sum=add;
+    console.log(sum(5,1));
+    console.log(add(6,2));
+
+
+//Passing function to a function
+function avg(a,b,sum){
+    return sum(a,b)/2;
+}    
+function sum(a,b){
+    return a+b;
+}
+var add=sum;
+var result=avg(5,10,add);
+console.log("Result for finding average "+result);
+
