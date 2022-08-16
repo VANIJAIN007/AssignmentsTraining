@@ -91,3 +91,9 @@ var a=function(){ //NO NAME also known as anonymous function
 
 console.log(a());
 
+
+//Self-Invoking Function
+
+(function(){
+    console.log("This is self Invoking function and its get called itself");
+})();
