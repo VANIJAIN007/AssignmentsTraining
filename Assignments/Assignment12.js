@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-image:linear-gradient(to right,blue,skyblue);
-        }
-    </style>
-</head>
-<body>
-    <script>
-        function len(){
+function len(){
     // "Numbers to add are "+arguments.length;
     var s=0;
     var a=arguments.length;
@@ -23,7 +8,7 @@
         s=s+n;
     }
     console.log(s);
-    document.write(s);
+    // document.write(s);
      
 }
 len(1,2,3,4);
@@ -90,6 +75,3 @@ function addString(str){
 }
 console.log(addString("abcjndef"));
 console.log(addString("ab"));
-    </script>
-</body>
-</html>
