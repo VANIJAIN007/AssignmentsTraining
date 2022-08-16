@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
@@ -14,19 +18,73 @@
             
 
         }
+        .colorBlue{
+            color:blue;
+            font-size: 30px;
+            text-shadow: 2px 2px 2px yellow;
+        }
+        .colorRed{
+            color: red;
+            font-size:30px;
+            text-shadow: 2px 2px 2px white;
+        }
         h2{
             color: white;
             text-shadow: 3px 3px 5px green;
+            /* font-family: 'Alumni Sans Inline One', cursive; */
+        }
+        button{
+            height:40px;
+            width:100px;
+            border-radius: 9%;
+            background-color: lightseagreen;
+            cursor: pointer;
+            
         }
     </style>
 </head>
 <body>
+        <h1 style="color:orange"><u>Assignment</u></h1>
+        <p class="colorBlue">
+
+        1. Write a Program to return sum of all Arguments passed to a Function.
+   console.log(add(2, 3));              // 5
+   console.log(add(1, 2, 3, 4, 5)); // 15
+
+2. Write a Program to return more than one value from a Function.
+   
+3. Write a code to return entire function definition and display it.
+
+4. Write a JavaScript program to create a new string adding "New!" in front of a given String. If the given string begins with "New!" already then return the original string. (Use Functional Approach)
+
+5. Write a JavaScript program to create a new string from a given string taking first 3 characters and the last 3 characters of a string and add them together. The string length must be 3 or more. If not, return the original string is returned.  (Use Functional Approach)
+
+
+    </p>
+    <button id="submit">Change color</button>
+    <!-- <button id="show">Show</button> -->
     <script>
         document.write("<h1>Task 1")
+
         // document.body.style.background="linear-gradient(to right,lightgrey,white)"
         document.body.style.background=" linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,122,0.4573179613642332) 50%, rgba(252,176,69,1) 100%)";
-        document.body.style.fontFamily="Times New Roman', Times, seriff";
+        // document.body.style.fontFamily="Times New Roman', Times, seriff";
+        document.body.style.fontFamily="'Dancing Script', cursive";
         document.body.style.textAlign="center";
+        // const btn_hide=document.getElementById("hide");
+        // const show_btn=document.getElementById("show");
+        const btn=document.getElementById("submit");
+        const para=document.querySelector("p");
+        btn.addEventListener("click",function(){
+            para.className="colorRed";
+        });
+        // show_btn.addEventListener("click",function(){
+        //     h2.classList.remove("hide");
+        // })
+        // const data=document.querySelector("h2");
+        // btn_hide.addEventListener("click",function(){
+        //     h2.classList.add("hide");
+        // });
         function len(){
     // "Numbers to add are "+arguments.length;
     var s=0;
