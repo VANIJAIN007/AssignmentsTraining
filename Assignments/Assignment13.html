@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: auto;
+            padding: 0px;
+            box-sizing: border-box;
+            /* font-Family:'Dancing Script', cursive; */
+        }
+        h1{
+            font-size: 72px;
+
+  background: -webkit-linear-gradient(lightgreen, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  /* text-shadow: 0px 0px 2px white; */
+        }
+        body{
+            background-image: linear-gradient(to right,deeppink,purple);
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+            color:grey;
+            text-shadow: 2px 2px 2px white;
+            font-size: 30px;
+        }h3{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment</h1>
+    <script>
+    document.write("<BR><H2>TASK 1");
+
+//Call
+var obj={
+    firstname:"Vani",
+    lastname:"Jain",
+    fullname:function(){
+        return this.firstname+" "+this.lastname;
+    }
+}
+// console.log(obj.fullname());
+var person2={
+    firstname:"raja",
+    lastname:"singh",
+}
+
+console.log(obj.fullname.call(person2));
+document.write("<br><h3>"+obj.fullname.call(person2));
+
+//Apply
+
+var obj1={
+    firstname:"Vanya",
+    lastname:"Sharma",
+
+}
+console.log(obj.fullname.apply(obj1));
+document.write("<br>"+obj.fullname.apply(obj1));
+
+//Task2
+
+document.write("<BR><H2>TASK 2");
+
+var number=[8,27,64,125,216];  
+var numberArr=number.map((i)=>Math.cbrt(i));
+console.log(numberArr);
+document.write("<br><h3>My array after cube root:- "+numberArr);
+
+//Task 3
+
+document.write("<BR><H2>TASK 3");
+
+for(var i=0;i<5;i++){
+setTimeout(callback,3000);
+}
+function callback(){
+    console.log("Hi");
+}
+
+
+//Task4
+document.write("<BR><H2>TASK 4");
+
+var people = [
+    { name: "Ashish", age: 23 },
+    { name: "Ajay", age: 21 },
+    { name: "Arvind", age: 26 },
+    { name: "Mahesh", age: 28 },
+    { name: "Jay", age: 19 }
+  ];
+
+  var arr=people.map((i)=>{return i.name+" "+i.age+" "});
+  console.log(arr);
+  document.write("<br><h3>My array :- "+arr);
+
+  //Task 5
+
+  document.write("<BR><H2>TASK 5");
+
+var ages=people.map((i)=>{return i.age});
+var result=ages.filter(filterAge).sort(function(n1,n2){return n2.age-n1.age});
+console.log(result);
+document.write("<br><h3>Result :- "+result);
+function filterAge(age){
+    return age<25
+}
+// var result=ages.filter(filterAge);
+// console.log(result);
+
+
+
+    </script>
+</body>
+</html>
