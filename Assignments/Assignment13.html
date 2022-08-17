@@ -30,7 +30,7 @@
         h2{
             text-align: center;
             margin-top: 20px;
-            color:grey;
+            color:gray;
             text-shadow: 2px 2px 2px white;
             font-size: 30px;
         }h3{
@@ -38,12 +38,17 @@
             margin-top: 20px;
             font-size: 25px;
         }
+        p{
+            margin-top: 20px;
+            color:gray;
+        }
     </style>
 </head>
 <body>
     <h1>Assignment</h1>
     <script>
     document.write("<BR><H2>TASK 1");
+        document.write("<br><p>1. Write a Program to use call() and apply() Method");
 
 //Call
 var obj={
@@ -60,7 +65,7 @@ var person2={
 }
 
 console.log(obj.fullname.call(person2));
-document.write("<br><h3>"+obj.fullname.call(person2));
+document.write("<br><h3>Call Function :-"+obj.fullname.call(person2));
 
 //Apply
 
@@ -70,12 +75,12 @@ var obj1={
 
 }
 console.log(obj.fullname.apply(obj1));
-document.write("<br>"+obj.fullname.apply(obj1));
+document.write("<br><h3>Apply Function :- "+obj.fullname.apply(obj1));
 
 //Task2
 
 document.write("<BR><H2>TASK 2");
-
+document.write("<br><p>2. Write a Program to create an array having cube root of every element of another array var numbers = [8,27,64,125,216];")
 var number=[8,27,64,125,216];  
 var numberArr=number.map((i)=>Math.cbrt(i));
 console.log(numberArr);
@@ -83,18 +88,34 @@ document.write("<br><h3>My array after cube root:- "+numberArr);
 
 //Task 3
 
-document.write("<BR><H2>TASK 3");
+// document.write("<BR><H2>TASK 3");
+// document.write("<br><p>3. Write a Program to call a function in an interval of 3 sec for 5 times.")
+// for(var i=0;i<5;i++){
+// setTimeout(callback,3000);
+// }
+// function callback(){
+//     console.log("Hi");
+// }
+// var count = 5;
 
-for(var i=0;i<5;i++){
-setTimeout(callback,3000);
-}
-function callback(){
-    console.log("Hi");
-}
+//         printWithDelay();
 
+//         function printWithDelay() {
+//         setTimeout(function() {
+//             document.write("Hello <br>");
+
+//             count--;
+
+//             if (0 < count) {
+//             printWithDelay();
+//             };
+//         }, 1000);
+//         };
 
 //Task4
 document.write("<BR><H2>TASK 4");
+document.write("<br><p>4. Write a Program to iterate an Array of Objects using map function var people");
+  
 
 var people = [
     { name: "Ashish", age: 23 },
@@ -111,7 +132,7 @@ var people = [
   //Task 5
 
   document.write("<BR><H2>TASK 5");
-
+document.write("<br><p>5. Write a Program to Filter out people whose age is less than 25 in descending order.")
 var ages=people.map((i)=>{return i.age});
 var result=ages.filter(filterAge).sort(function(n1,n2){return n2.age-n1.age});
 console.log(result);
