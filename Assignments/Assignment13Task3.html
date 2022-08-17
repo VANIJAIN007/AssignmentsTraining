@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYLE>
+    body{
+            /* background-image: linear-gradient(to right,deeppink,purple); */
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+            color:gray;
+            text-shadow: 2px 2px 2px white;
+            font-size: 30px;
+        }h3{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 25px;
+        }
+        p{
+            margin-top: 20px;
+            color:gray;
+        }
+</STYLE>
+<body>
+    <script>
+        //  document.write("<BR><H2>TASK 3");
+
+        var count = 5;
+        Interval();
+        function Interval() {
+        setTimeout(function() {
+            document.write("<H3>Hello <br>");
+            count--;
+            if (0 < count)
+            {
+            Interval();
+            };
+            }, 3000);
+        };    
+    </script>
+</body>
+</html>
