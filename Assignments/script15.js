@@ -74,7 +74,7 @@ btn.onclick=function createList(e){
 
         toList.onclick=function checkBtn(e){
             var check=e.target;
-            window.localStorage.setItem("my list"+toInput.value);
+            // window.localStorage.setItem("my list"+toInput.value);
             // console.log(check);
             if(check.classList[0]=="deletebutton"){
                 var parentNode=check.parentElement;
