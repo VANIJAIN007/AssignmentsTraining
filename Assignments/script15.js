@@ -39,6 +39,18 @@ var btn=document.querySelector("button");
 var toList=document.querySelector(".todo-list");
 var toInput=document.querySelector(".todo-input");
 var formEvent=document.querySelector("form");
+var output=document.getElementById('output');
+var newStore1=document.getElementsByClassName(".newStore1");
+var i=1;
+var a="";
+// output.innerText=toInput.val;
+// localStorage.get(toInput.val);
+// window.setTimeout(function () {
+//     window.location.reload();
+//   }, 30000);
+// window.onload=function(){
+    
+// }
 
 btn.onclick=function createList(e){
         e.preventDefault();
@@ -46,7 +58,19 @@ btn.onclick=function createList(e){
             alert("Input value can't be blank");
         }
         else{
-        
+            
+            window.localStorage.setItem("my list"+i,toInput.value);
+            
+            i++;
+            // var saveValue;
+// function load(){
+// saveValue = localStorage.getItem("saveValue");
+// document.getElementById("saveField").value = saveValue;
+// };
+// function save(){
+// saveValue = document.getElementById("saveField").value;
+// localStorage.setItem("saveValue", saveValue);
+// };
 
         var newDiv=document.createElement('div');
         newDiv.classList.add("divEle");
@@ -62,26 +86,40 @@ btn.onclick=function createList(e){
         complbtn.innerHTML='<i class="fa-solid fa-check"></i>';
         newDiv.appendChild(complbtn);
 
+
+
         var deleteBtn=document.createElement('button');
         deleteBtn.classList.add("deletebutton");
         deleteBtn.innerHTML='<i class="fa-solid fa-trash-can"></i>';
         newDiv.appendChild(deleteBtn);
 
+        // var newStore=document.createElement("div");
+        // newDiv.appendChild(newStore);
+        // newStore.appendChild(newStore1);
+
+        // newStore.classList.add("storeDiv");
+        // newStore.appendChild(newDiv);
+        // newStore1.appendChild(newStore);
+
+
+
 
 
         toList.appendChild(newDiv);
+
         toInput.value="";
 
         toList.onclick=function checkBtn(e){
             var check=e.target;
-            // window.localStorage.setItem("my list"+toInput.value);
             // console.log(check);
             if(check.classList[0]=="deletebutton"){
+                console.log(a);
                 var parentNode=check.parentElement;
                 parentNode.remove();
 
             }
             else if(check.classList[0]=="completebutton"){
+
                 var parentNode=check.parentElement;
                 parentNode.classList.add('check');
                 // var a=check.parentNode.classList;
@@ -99,6 +137,7 @@ btn.onclick=function createList(e){
         
     }
     }
+    
     // var newDiv=document.createElement('div');
     // newDiv.classList.add("divEle");
     // toList.appendChild(newDiv);
