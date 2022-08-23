@@ -14,6 +14,11 @@
     background-size: cover;
     min-height: 100vh;
   }
+  #todo{
+    min-height: 100vh;
+    display: none;
+  }
+  input[type="search"]
   input[type="text"]{
     box-shadow: 2px 2px 4px grey;
   }

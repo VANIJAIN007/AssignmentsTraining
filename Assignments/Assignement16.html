@@ -22,10 +22,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        .container{
+            height:100vh;
+            width:100%;
+            background-image:linear-gradient(to right top,blue,deeppink);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            height:150px;
+            width:150px;
+            border: 10px solid rgb(204, 197, 197);
+            border-top: 10px solid white;          
+            border-radius: 50%;
+            animation: loader 2s linear infinite;
+
+        }
+        @keyframes loader {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            /* margin-top: 120px;
+            margin-left: 15px; */
+            animation: popup 2s linear infinite;
+            
+        }
+        @keyframes popup {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="box">
+            
+        </div>
+        <br>
+        <p>Loading</p>
+
+    </div>
+    <div id="todo">
     <header>To-do List</header>
-    <form><input type="search" placeholder="Search">
+    <form>
       <input type="text" class="todo-input" placeholder="Make Your list"/>
       <button>
         <i class="fa fa-plus-square" aria-hidden="true"></i>
@@ -35,11 +97,14 @@
         <!-- <input id="saveField" placeholder="0" type="number"></input>
         <button onclick="load()">load</button>
         <button onclick="save()">save</button> -->
-        <div class="newStore1">
+        <!-- <div class="newStore1">
 
-        </div>
+        </div> -->
               <ul class="todo-list"></ul>
     </div>
+    </div>
     <script src="./script15.js"></script>
+    <script src="./script16.js"></script>
+
 </body>
 </html>
