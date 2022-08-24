@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+      <style>
+        body{
+            background-image: url("https://media.istockphoto.com/photos/anonymous-people-avatars-in-virtual-space-picture-id1367515302?b=1&k=20&m=1367515302&s=170667a&w=0&h=HuEzA7NhyU503Xm8gPrQAYAnQYP_VgtoFMyY-cM1KEs=");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #Connectivity{
+            position: relative;
+        }
+        #status{
+            text-align: center;
+            /* top:46vh;
+            left:47.5%; */
+            color: skyblue;
+            margin:20px;
+            font-family: 'Dancing Script', cursive;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px blue;
+
+        }
+        .material-icons{
+            text-align: center;
+            /* position: absolute;
+            top:50vh;
+            left:50%; */
+            margin-left: 11vh;
+        }
+        #container{
+            background-color: skyblue;
+            height: 20vh;
+            width:25vh;
+            position: absolute;
+            top:25%;
+            left:45%;
+            font-size: 24px;
+            border-radius: 5%;
+            box-shadow: 2px 2px 2px white;
+            margin-top: 20%;
+
+        }
+      </style>
+</head>
+<div>
+    <div id="Connectivity">   
+        <div id="container">
+        <div id="status">You are online</div>
+        <span class="material-icons">
+        </span>
+        </div>
+    </div> 
+        
+    </div>
+
+
+    <script>
+        var i=document.querySelector(".material-icons");
+        // console.log(navigator.onLine);
+        // window.addEventListener("online",function(){
+        //     document.getElementById("status").innerHTML="You are online";
+        //     console.log("online");
+        //     i.innerHTML="wifi";
+        //     // i.style.color="green"
+            
+        // });
+        // window.addEventListener("offline",function(){
+        //     document.getElementById("status").innerHTML="You are offline";
+        // })
+        var o=document.getElementById("status");
+        function onlinestatus(){
+            o.innerHTML="You are online";
+            i.innerHTML="wifi";
+            i.style.color="green";
+            console.log("ONLINE");
+        }
+        function offlinestatus(){
+            o.innerHTML="You are offline";
+            i.innerHTML="wifi_off";
+            i.style.color="red";
+
+            console.log("offline");
+        }
+        window.onload=()=>{
+            setInterval(()=>{
+                if(navigator.onLine){
+                    onlinestatus();
+                }
+                else{
+                    offlinestatus();
+                }
+            },500);
+        };
+    </script>
+</body>
+</html>

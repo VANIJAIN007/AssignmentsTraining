@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,th,td{
+        border:2px solid blue;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    body{
+        background-image: url("https://images.unsplash.com/photo-1618172193763-c511deb635ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvdmlkJTIwaW1hZ2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    h1{
+        text-align: center;
+
+    }
+    .cases{
+        /* height:500px;
+        width: 500px;
+        border: 2px solid blue;
+        
+        background-color: lightblue;
+        border-radius:5%; */
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+    }
+    .cases1{
+       
+        height:500px;
+        width: 500px;
+        border: 2px solid blue;
+        
+        background-color: lightblue;
+        border-radius:5%;
+        position: absolute;
+        top:50%;
+        margin-top: 50px;
+    }
+    
+</style>
+<body>
+    <h1>Covid Cases by fetching data using API.</h1>
+    <div class="cases">
+        <div class="cases1">
+            <table id="mytable">
+                <th>Sno.</th>
+                <th>Country</th>
+                <th>TotalRecovered</th>
+                <th>Date</th>
+            </table>
+        </div>
+    </div>
+    <script>
+        const API_URL="https://api.covid19api.com/summary";
+        function apiget(url){
+            console.log("We are good to go");
+            return new Promise((resolve,reject)=>{
+                var request=new XMLHttpRequest();
+                request.open("GET",url);
+                request.send();
+                request.onload=()=>{
+                    console.log(request.response);
+                    console.log(JSON.parse(request.response));
+
+                    if(request.status===200){
+                        // console.log("Nice");
+                        // resolve(request.response);
+                    }
+                    else{
+                        console.log("Bad Request");
+                        reject('this');
+                    }
+                }
+
+            });
+        }
+        console.log(apiget(API_URL));
+
+    //    console.log(apiget(API_URL));
+
+       apiget(API_URL).then((val)=>displayData(JSON.parse(val))).catch((err)=>console.log("Error"+err));
+       function displayData(serverdata){
+        console.log(serverdata);
+        for(var user of serverdata){
+            console.log(user.id);
+        }
+
+        }
+        // for(var user of serverdata){
+            // console.log("Entered");
+            // let newtr=document.createElement("tr");
+
+            // let newtd1=document.createElement("td");
+            // let newtd2=document.createElement("td");
+            // let newtd3=document.createElement("td");
+            // let newtd4=document.createElement("td");
+            // // console.log(user.id);
+
+
+            // newtd1.innerText=" "+global.newConfirmed; 
+            // // newtd2.innerText=" "+user.country;
+            // // newtd3.innerText=" "+user.totalrecovered;
+            // // newtd4.innerText=" "+user.date;
+
+
+            // // console.log(user.id);
+
+            // newtr.appendChild(newtd1);
+            // // newtr.appendChild(newtd2);
+            // // newtr.appendChild(newtd3);
+            // // newtr.appendChild(newtd4);
+            // document.getElementById("mytable").appendChild(newtr);
+    //     }
+        
+    </script>
+</body>
+</html>
