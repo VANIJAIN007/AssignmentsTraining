@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css
+
+
+
+    ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            text-transform: uppercase;
+            font-size: 40px;
+
+        }
+        body{
+            background-image: url("./images/contact\ images.jpg");
+            background-size: cover;
+        }
+        select{
+            width:100px;
+        }
+        .info{
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-left: 50px;
+        }
+        h2{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: orangered;
+            font-family: 'Sacramento', cursive;
+            font-size: 30px;
+            text-shadow: 2px 2px 2px white;
+
+        }
+        .info1{
+            height:120vh;
+            width:78%;
+            background-image: linear-gradient(to right ,purple,deeppink);
+        }
+        h1{
+            color: red;
+            text-shadow: 3px 1px blue;
+        }
+        body{
+            /* background-image: linear-gradient(to right,red,white); */
+        }
+        #a{
+            height:7vh;
+            width:30vh;
+            border-radius: 5%;
+            margin-left: 23vh;
+
+        }
+        button{
+            height:5vh;
+            width:10vh;
+        }
+        input[type="text"]{
+            box-shadow: 2px 2px 2px grey;
+            margin-top: 20px;
+            padding: 8px;
+            margin-left: 50vh;
+        }
+        input[type="email"]
+        {
+            box-shadow: 2px 2px 2px grey;
+            margin-top: 20px;
+            padding: 8px;
+            margin-left: 50vh;
+
+            
+
+        }
+        input[type="number"]{
+            box-shadow: 2px 2px 2px grey;
+            margin-top: 20px;
+            padding: 8px;
+            margin-left: 14.5vh;
+
+
+        }
+        input[type="radio"]{
+            box-shadow: 2px 2px 2px grey;
+            margin-top: 20px;
+            padding: 8px;
+            margin-left: 23vh;
+
+        }
+        input[type="checkbox"]{
+            box-shadow: 2px 2px 2px grey;
+            margin-top: 60px;
+            padding: 8px;
+            margin-left: 23vh;
+
+        }
+        button{
+            border-radius: 10%;
+            background-color: lightslategray;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            margin-top: 60px;
+            margin-left: 70vh;
+
+        }
+        label{
+            font-size: 24px;
+            margin-left: 50px;
+            font-family: 'Yellowtail', cursive;
+
+        }
+        button:hover{
+            background-color: rgb(170, 94, 170);
+            color: white;
+            cursor: pointer;
+            color: black;
+        }
+        select{
+            padding: 8px;
+            width: 28vh;
+            margin-left: 28vh;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <div class="info">
+        <div class="info1">
+            <h2>Tell me something about you</h2>
+        <label for="Name" >Name : </label><input type="text" placeholder="Enter your name">
+        <br>
+        <label for="">Email : </label><input type="email" placeholder="Enter your email address">
+        <br>
+        <label for="">On a scale of 1-10 , how good it was : </label><input type="number" placeholder="Enter a number between 1 and 10">
+        <br>
+        <label for="">Where you want to use it : </label><select option="1">At home</select>
+        <br>
+        <label for="circles">At what time We can contact you? : </label><input type="radio" id="circles">Morning
+        <input type="radio" id="circles">Afternoon
+        <input type="radio" id="circles">Evening
+            <br>
+        <label for="">What emotions did you experience :  </label>
+        <input type="checkbox">Excited
+        <input type="checkbox">Humbled
+        <input type="checkbox">Elated
+        <input type="checkbox">Loved
+        <input type="checkbox">Enthusiastic
+
+
+        <br>
+        <label for="">Lorem ipsum dolor sit amet..  </label><input type="text" id ="a" placeholder="Enter your experience here....">
+        <br>   
+        <button>Submit</button>
+    </div>
+        
+
+    </div>
+</body>
+</html>
