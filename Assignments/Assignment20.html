@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <style>
+    #Connectivity{
+            position: relative;
+        }
+        #status{
+            text-align: center;
+            /* top:46vh;
+            left:47.5%; */
+            color: skyblue;
+            margin:20px;
+            font-family: 'Dancing Script', cursive;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px blue;
+
+        }
+        .material-icons{
+            text-align: center;
+            /* position: absolute;
+            top:50vh;
+            left:50%; */
+            margin-left: 11vh;
+        }
+        #container{
+            background-image: linear-gradient(deeppink,grey);
+            height: 20vh;
+            width:25vh;
+            position: absolute;
+            top:25%;
+            left:45%;
+            font-size: 24px;
+            border-radius: 5%;
+            box-shadow: 2px 2px 2px white;
+            margin-top: 20%;
+
+        }
     table,tr,th,td{
         border:2px solid blue;
         border-collapse: collapse;
@@ -17,7 +66,10 @@
         justify-content: center;
     }
     body{
-        background-image: url("https://images.unsplash.com/photo-1618172193763-c511deb635ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvdmlkJTIwaW1hZ2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60");
+        /* background-image: url("https://images.unsplash.com/photo-1618172193763-c511deb635ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvdmlkJTIwaW1hZ2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"); */
+        /* background-image: url("https://media.istockphoto.com/photos/the-molecules-of-coronavirus-picture-id1220225071?k=20&m=1220225071&s=612x612&w=0&h=3y9qFnqD4Fo-4rUm8yUu_f46LdVFzxT07aa5nL7vp-o="); */
+        /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZNQ6GXQ018Fqr6myBZlRdnF3z6l2skyp0dw&usqp=CAU"); */
+        background-image: url("https://media.istockphoto.com/photos/coronavirus-picture-id1366654397?b=1&k=20&m=1366654397&s=170667a&w=0&h=ZEHAt3BJhTcpGITCnJ1UKZpFN7ppeLQz14iDECtcu0w=");
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -45,11 +97,30 @@
         width: 500px;
         border: 2px solid blue;
         
-        background-color: lightblue;
+        background-image: linear-gradient(to right,lightpink,deeppink,grey);
         border-radius:5%;
         position: absolute;
         top:50%;
         margin-top: 50px;
+    }
+    p{
+        color:blue;
+        font-size: 27px;
+        text-align: center;
+        
+    }
+    select{
+        padding: 8px;
+        border: 2px solid blue;
+        background-color: skyblue;
+        box-shadow: 2px 2px 2px grey;
+        
+
+        
+
+    }
+    select:hover{
+        transform: scale(1.1);    
     }
     h1{
         background-image:linear-gradient(purple,skyblue);
@@ -80,139 +151,29 @@
                 <th>Date</th>
             </table> -->
             <h1>Information</h1>
-           <h2>Country : <span id="1"></span></h2><select id="sel"></select>
-           <button onclick=""></button>
+            <p>Select your Location :<span><select id="sel" style="width:150px"></select></span></p>
+           <h2>Country : <span id="1"></span></h2>
             <h2>Total Confirmed Cases :<span id="2"></span></h2>
             <h2>NewRecovered Cases : <span id="3"></span></h2>
             <h2>Total Recovered Cases : <span id="4"></span></h2>
             <h2>Country Code : <span id="5"></span></h2>
             <h2>Date : <span id="6"></span></h2>
         </div>
+        <div>
+            <div id="Connectivity">   
+                <div id="container">
+                    <div id="status">You are online</div>
+                    <span class="material-icons">
+                    </span>
+                </div>
+            </div> 
+                
+        </div>
+        
     </div>
     <script>
         const API_URL="https://api.covid19api.com/summary";
-    //     function apiget(url){
-    //         console.log("We are good to go");
-    //         return new Promise((resolve,reject)=>{
-    //             var request=new XMLHttpRequest();
-    //             request.open("GET",url);
-    //             request.send();
-    //             request.onload=()=>{
-    //                 console.log(request.response);
-    //                 console.log(request.response);
-
-    //                 if(request.status===200){
-    //                     // console.log("Nice");
-    //                     resolve(request.response);
-    //                 }
-    //                 else{
-    //                     console.log("Bad Request");
-    //                     reject('this');
-    //                 }
-    //             }
-
-    //         });
-    //     }
-    //     var index=0;
-    // apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>{
-    //     // function countriesName(coun){
-    //         // console.log(re.countries[5]);
-    //         // var select= document.getElementById("sel");
-    //         // for(var i=0;i<=195;i++){
-    //         //     var option=document.createElement("option");
-    //         //     select.value=re.Countries[i].Country;
-    //         //     option.innerText=re.Countries[i].Country;
-    //         //     select.appendChild(option);
-    //         // }
-    //         // var k;
-    //        return rr(re.Countries);
-    //     //    for( var i=0;i<=195;i++){
-    //     //     if(re.Countries[i].Country===t){ k=i; break;}
-    //     //    }
-    //         // displayData(re.Countries[x])
-    //         console.log(x);
-            
-    //     }).then((r)=>displayData(r)).catch((err)=>console.log(err));
-    // // apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>countriesName(re.Countries)).catch((err)=>console.log(err));
-    // //     for(var i=0;i<a;i++){
-
-    // //     }
-    // // //    onsole.log(apiget(API_URL)); c
-    // //     for(var i=0;i<Countries.length;i++){
-    // //         if(Countries[i]=="India")
-    // //         {
-    // //             apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>displayData(re.Countries[0])).catch((err)=>console.log(err));
-                
-                
-    // //         }
-    // //     }
-    // //    console.log(apiget(API_URL));
-    // //    apiget(API_URL).then((val)=>{ return JSON.parse(val)}).then((re)=>displayData(re.Countries[0])).catch((err)=>console.log("Error"+err));
-    // // apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>displayData(re.Countries[0])).catch((err)=>console.log(err));
-    // //    function displayData(serverdata){
-    // //     console.log(serverdata);
-       
-    // function displayData(serverdata){
-        
-    //     var h1=document.getElementById("1");
-    //     var h2=document.getElementById("2");
-    //     var h3=document.getElementById("3");
-    //     var h4=document.getElementById("4");
-    //     var h5=document.getElementById("5");
-    //     var h6=document.getElementById("6");
-
-    //     h1.innerText=" "+serverdata.Country;
-    //     h2.innerText=" "+serverdata.TotalConfirmed;
-    //     h3.innerText=" "+serverdata.NewRecovered;
-    //     h4.innerText=" "+serverdata.TotalRecovered;
-    //     h5.innerText=" "+serverdata.CountryCode;
-    //     h6.innerText=" "+serverdata.Date;
-
-       
-
-        //         console.log(serverdata);
-        
-        // for(var user of serverdata){
-            // console.log("Entered");
-            // let newtr=document.createElement("tr");
-
-            // let newtd1=document.createElement("td");
-            // let newtd2=document.createElement("td");
-            // let newtd3=document.createElement("td");
-            // let newtd4=document.createElement("td");
-            // // // console.log(user.id);
-
-
-            // newtd1.innerText=" "+serverdata.NewConfirmed; 
-            // newtd2.innerText=" "+serverdata.Country;
-            // newtd3.innerText=" "+serverdata.TotalRecovered;
-            // newtd4.innerText=" "+serverdata.Date;
-
-
-            // // // console.log(user.id);
-
-            // newtr.appendChild(newtd1);
-            // newtr.appendChild(newtd2);
-            // newtr.appendChild(newtd3);
-            // newtr.appendChild(newtd4);
-            // document.getElementById("mytable").appendChild(newtr);
-        // }
-        // function countriesName(coun){
-        //     console.log(countries[5]);
-        //     var select= document.getElementById("sel");
-        //     for(var i=0;i<195;i++){
-        //         var option=document.createElement("option");
-        //         option.innerText=coun[i].Country;
-        //         select.appendChild(option);
-        //     }
-        // }
-         function rr(){
-            
-
-
-
-
-            function apiget(url){
+        function apiget(url){
             console.log("We are good to go");
             return new Promise((resolve,reject)=>{
                 var request=new XMLHttpRequest();
@@ -234,14 +195,6 @@
 
             });
         }
-        var select= document.getElementById("sel");
-            for(var i=0;i<195;i++){
-                var option=document.createElement("option");
-                option.innerText=RE[i].Country;
-                select.appendChild(option);
-            }
-           
-            var x=document.getElementById("sel").selectedIndex;
         var index=0;
     apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>{
         // function countriesName(coun){
@@ -253,15 +206,15 @@
             //     option.innerText=re.Countries[i].Country;
             //     select.appendChild(option);
             // }
-            // var k;
-           return rr(re.Countries);
-        //    for( var i=0;i<=195;i++){
-        //     if(re.Countries[i].Country===t){ k=i; break;}
-        //    }
-            // displayData(re.Countries[x])
-            console.log(x);
+            rr(re.Countries);
+
+          
             
-        }).then((r)=>displayData(r)).catch((err)=>console.log(err));
+           
+           
+            
+        }).catch((err)=>console.log(err));
+
     // apiget(API_URL).then((val)=>{return JSON.parse(val)}).then((re)=>countriesName(re.Countries)).catch((err)=>console.log(err));
     //     for(var i=0;i<a;i++){
 
@@ -281,23 +234,7 @@
     //    function displayData(serverdata){
     //     console.log(serverdata);
        
-    function displayData(serverdata){
-        
-        var h1=document.getElementById("1");
-        var h2=document.getElementById("2");
-        var h3=document.getElementById("3");
-        var h4=document.getElementById("4");
-        var h5=document.getElementById("5");
-        var h6=document.getElementById("6");
-
-        h1.innerText=" "+serverdata.Country;
-        h2.innerText=" "+serverdata.TotalConfirmed;
-        h3.innerText=" "+serverdata.NewRecovered;
-        h4.innerText=" "+serverdata.TotalRecovered;
-        h5.innerText=" "+serverdata.CountryCode;
-        h6.innerText=" "+serverdata.Date;
-
-       
+    
 
         //         console.log(serverdata);
         
@@ -325,7 +262,7 @@
             // newtr.appendChild(newtd3);
             // newtr.appendChild(newtd4);
             // document.getElementById("mytable").appendChild(newtr);
-        }
+        
         // function countriesName(coun){
         //     console.log(countries[5]);
         //     var select= document.getElementById("sel");
@@ -335,11 +272,140 @@
         //         select.appendChild(option);
         //     }
         // }
+         function rr(RE){
+            var select= document.getElementById("sel");
+            for(var i=0;i<195;i++){
+                var option=document.createElement("option");
+                option.innerText=RE[i].Country;
+                option.value =RE[i].Country;
+                select.appendChild(option);
+                console.log(select);
+
+            }
+            select.onclick=function(){
+                var option=select.options[select.selectedIndex];
+                // console.log("option"+option);
+                var a=option.value;
+                // console.log(select);
+                console.log(a);
+                console.log(select.options.length);
+
+                for(var i=0;i<select.options.length;i++){
+                    if(a==RE[i].Country){
+                        var h1=document.getElementById("1");
+        var h2=document.getElementById("2");
+        var h3=document.getElementById("3");
+        var h4=document.getElementById("4");
+        var h5=document.getElementById("5");
+        var h6=document.getElementById("6");
+
+        h1.innerText=" "+RE[i].Country;
+        h2.innerText=" "+RE[i].TotalConfirmed;
+        h3.innerText=" "+RE[i].NewRecovered;
+        h4.innerText=" "+RE[i].TotalRecovered;
+        h5.innerText=" "+RE[i].CountryCode;
+        h6.innerText=" "+RE[i].Date;
+                    }
+                }
+                
+
+                
+
+            }
+            // for(var i=0;i<sel)
             
-           
+
+            // var h1=document.getElementById("1");
+
+            // h1.innerText=a;
+
+            // select.onclick=function(){
+                
+            // }
+            // console.log(select.selectedIndex);
+            // console.log(option)
+            // var h1=document.getElementById("1");
+
+            // setSelectedValue(select,a);
+
+
+
+            // var x=document.getElementById("sel").selectedIndex;
+            // var z=document.getElementsByTagName("option")[x].value;
+            // console.log("ee");
+            // console.log(z);
+            // for(var i=0;i<=195;i++){
+            //     if(RE.Countries[i]===z){
+            //         console.log(i);
+            //     }
+            // }
+            // displayData(RE.Countries[x])
         }
 
+// function setSelectedValue(selectObj, valueToSet) {
+//     var h1=document.getElementById("1");
+//     console.log(selectObj.options.length);
+//     console.log(selectObj.options[0].text);
+//         for (var i = 0; i < selectObj.options.length; i++) {
+//         if (selectObj.options[i].value== valueToSet) {
+//             console.log(selectObj.options[i].value==valueToSet);
 
+//             // h1.innerText=selectObj.options[i].value;
+//             selectObj.options[i].selected = true;
+//             return;
+//         }
+//     }
+    
+    
+// }
+
+        // function update(){
+        //     var select=document.getElementById("sel");
+        //     var option=select.options[select.selectedIndex];
+        //     console.log(option);
+        //     console.log(select.selectedIndex);
+        //     console.log(option)
+        //     var h1=document.getElementById("1");
+        //     setSelectedValue(sel,option);
+
+        // }
+
+        var i=document.querySelector(".material-icons");
+        // console.log(navigator.onLine);
+        // window.addEventListener("online",function(){
+        //     document.getElementById("status").innerHTML="You are online";
+        //     console.log("online");
+        //     i.innerHTML="wifi";
+        //     // i.style.color="green"
+            
+        // });
+        // window.addEventListener("offline",function(){
+        //     document.getElementById("status").innerHTML="You are offline";
+        // })
+        var o=document.getElementById("status");
+        function onlinestatus(){
+            o.innerHTML="You are online";
+            i.innerHTML="wifi";
+            i.style.color="green";
+            console.log("ONLINE");
+        }
+        function offlinestatus(){
+            o.innerHTML="You are offline";
+            i.innerHTML="wifi_off";
+            i.style.color="red";
+
+            console.log("offline");
+        }
+        window.onload=()=>{
+            setInterval(()=>{
+                if(navigator.onLine){
+                    onlinestatus();
+                }
+                else{
+                    offlinestatus();
+                }
+            },500);
+        };
     </script>
 </body>
 </html>
