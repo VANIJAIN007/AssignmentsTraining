@@ -29,11 +29,11 @@
             text-align: center;
             /* top:46vh;
             left:47.5%; */
-            color: skyblue;
+            /* color: skyblue; */
             margin:20px;
             font-family: 'Dancing Script', cursive;
             text-transform: uppercase;
-            text-shadow: 2px 2px 3px blue;
+            /* text-shadow: 2px 2px 3px blue; */
 
         }
         .material-icons{
@@ -44,16 +44,19 @@
             margin-left: 11vh;
         }
         #container{
-            background-image: linear-gradient(deeppink,grey);
-            height: 20vh;
-            width:25vh;
-            position: absolute;
+            /* background-image: linear-gradient(deeppink,grey); */
+            /* height: 20vh;
+            width:25vh; */
+            /* position: absolute;
             top:25%;
             left:45%;
             font-size: 24px;
             border-radius: 5%;
             box-shadow: 2px 2px 2px white;
-            margin-top: 20%;
+            
+            margin-top: 20%; */
+
+            position: relative;
 
         }
     table,tr,th,td{
@@ -95,26 +98,31 @@
        
         height:500px;
         width: 500px;
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
+        box-shadow: 2px 2px 2px black;
         
-        background-image: linear-gradient(to right,lightpink,deeppink,grey);
+        background-image: linear-gradient(grey,transparent);
         border-radius:5%;
         position: absolute;
         top:50%;
         margin-top: 50px;
     }
     p{
-        color:blue;
+        color:black;
         font-size: 27px;
         text-align: center;
-        
+        font-family: 'Dancing Script', cursive;
+
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px rgb(231, 207, 207);
     }
     select{
         padding: 8px;
-        border: 2px solid blue;
-        background-color: skyblue;
+        border: 2px solid deeppink;
+        background-color: pink;
         box-shadow: 2px 2px 2px grey;
-        
+        border-radius: 10%;
+        color:red
 
         
 
@@ -123,21 +131,35 @@
         transform: scale(1.1);    
     }
     h1{
-        background-image:linear-gradient(purple,skyblue);
+        background-image:linear-gradient(rgb(188, 86, 141),grey);
         text-shadow:2px 2px 2px white;
     }
     h2{
-        color: purple;
+        /* color: rgb(191, 171, 171); */
+        color: rgb(231, 207, 207);
         text-align: left;
         margin-left: 20px;
+        text-shadow: 2px 2px 2px black;
+        font-family: 'Dancing Script', cursive;
+        text-transform: uppercase;
+
     }
+
     span{
-        color: blue;
+        color: deeppink;
         text-align: right;
-        margin-left: 20px;
+        /* position: absolute;
+        bottom:0;
+        top:0 */
+
     }
     select{
         width:20%;
+    }
+    span .mat{
+        position: absolute;
+        top:0;
+        right:0;
     }
 </style>
 <body>
@@ -160,13 +182,13 @@
             <h2>Date : <span id="6"></span></h2>
         </div>
         <div>
-            <div id="Connectivity">   
-                <div id="container">
-                    <div id="status">You are online</div>
-                    <span class="material-icons">
-                    </span>
-                </div>
-            </div> 
+            <!-- <div id="Connectivity">    -->
+                <!-- <div id="container"> -->
+                    <!-- <div id="status"></div>
+                    <span class="material-icons" id="mat">
+                    </span> -->
+                <!-- </div> -->
+            <!-- </div>  -->
                 
         </div>
         
@@ -384,13 +406,13 @@
         // })
         var o=document.getElementById("status");
         function onlinestatus(){
-            o.innerHTML="You are online";
+            // o.innerHTML="You are online";
             i.innerHTML="wifi";
             i.style.color="green";
             console.log("ONLINE");
         }
         function offlinestatus(){
-            o.innerHTML="You are offline";
+            // o.innerHTML="You are offline";
             i.innerHTML="wifi_off";
             i.style.color="red";
 
