@@ -1,0 +1,27 @@
+#canvas{
+    /* background-image: linear-gradient(yellowgreen,green); */
+    border-radius: 5%;
+    border: 2px solid red;
+
+    
+}
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+h1{
+    color: black;
+}
+#beetle{
+    height:200px;
+    width:300px;
+    display: none;
+}
+#coin{
+    display: none;
+    
+}
