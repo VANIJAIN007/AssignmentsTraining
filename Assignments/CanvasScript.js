@@ -7,10 +7,10 @@ const image2=document.getElementById("coin");
 // ctx.fillStyle="red";
 // ctx.fillRect(50,50,150,100);
 const coin1={
-    x:40,
-    y:50,
-    w:100,
-    h:200,
+    x:20,
+    y:20,
+    w:50,
+    h:50,
     size:40
 
 };
@@ -28,11 +28,36 @@ const beetle={
 // coinImage();
 // coinImage1();
 function coinImage(){
-    ctx.drawImage(image2,coin1.x+400,coin1.y,coin1.w,coin1.h);
+    ctx.drawImage(image2,coin1.x+50,coin1.y,coin1.w,coin1.h);
     
 }
 function coinImage1(){
+    ctx.drawImage(image2,coin1.x+70,coin1.y+300,coin1.w,coin1.h);
+}
+function coinImage2(){
+    ctx.drawImage(image2,coin1.x+30,coin1.y+400,coin1.w,coin1.h);
+}
+function coinImage3(){
+    ctx.drawImage(image2,coin1.x+30,coin1.y+400,coin1.w,coin1.h);
+}
+function coinImage4(){
     ctx.drawImage(image2,coin1.x+400,coin1.y+300,coin1.w,coin1.h);
+}
+function coinImage5(){
+    ctx.drawImage(image2,coin1.x+200,coin1.y+200,coin1.w,coin1.h);
+}
+function coinImage6(){
+    ctx.drawImage(image2,coin1.x+600,coin1.y+300,coin1.w,coin1.h);
+}
+function coinImage7(){
+    ctx.drawImage(image2,coin1.x+400,coin1.y+300,coin1.w,coin1.h);
+}
+
+function coinImage8(){
+    ctx.drawImage(image2,coin1.x+500,coin1.y+50,coin1.w,coin1.h);
+}
+function coinImage9(){
+    ctx.drawImage(image2,coin1.x+200,coin1.y+500,coin1.w,coin1.h);
 }
 function beetleimage(){
     ctx.drawImage(image1,beetle.x,beetle.y,beetle.w,beetle.h);
@@ -51,6 +76,14 @@ function movebeetle(){
     beetleimage3();
     coinImage();
     coinImage1();
+    coinImage2();
+    coinImage3();
+    coinImage4();
+    coinImage5();
+    coinImage6();
+    coinImage7();
+    coinImage8();
+    coinImage9();
     
     beetle.x+=beetle.dx;
     if(beetle.x==canvas.width){
