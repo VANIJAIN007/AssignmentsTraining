@@ -3,6 +3,7 @@ var ctx=canvas.getContext('2d');
 
 const image1=document.getElementById("beetle");
 const image2=document.getElementById("coin");
+const image3=document.getElementById("walk");
 // canvas.width=window.innerWidth;
 // ctx.fillStyle="red";
 // ctx.fillRect(50,50,150,100);
@@ -24,9 +25,21 @@ const beetle={
     dy:2
     
 };
+const walk={
+    x:50,
+    y:50,
+    w:100,
+    h:200,
+    speed:5,
+    dx:2,
+    dy:3
+}
 
 // coinImage();
 // coinImage1();
+function walkImage(){
+    ctx.drawImage(image3,walk.x,walk.y,walk.w,walk.h);
+}
 function coinImage(){
     ctx.drawImage(image2,coin1.x+50,coin1.y,coin1.w,coin1.h);
     
@@ -84,7 +97,7 @@ function movebeetle(){
     coinImage7();
     coinImage8();
     coinImage9();
-    
+    walkImage();
     beetle.x+=beetle.dx;
     if(beetle.x==canvas.width){
         beetle.x=0;
