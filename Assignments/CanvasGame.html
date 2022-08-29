@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Game</title>
+    <style>
+        body{
+            /* background-image: url("../Assignments/images/article2.jpg"); */
+        }
+    </style>
 </head>
 <link rel="stylesheet" href="./styleCanvas.css">
 
@@ -13,7 +18,7 @@
     <canvas id="canvas" width="800" height="600"></canvas>
     <img src="../Assignments/images/Fbeetleimage.png" alt="" id="beetle">
     <img src="../Assignments/images/coinimage1.png" alt="" id="coin">
-    <img src="../Assignments/images/fimagewalk.png" alt="" id="walk">
+    <img src="../Assignments/images/fimagewalk.png" onmouseover="this.src='../Assignments/images/article1.jpg'" onmouseout="this.src='../Assignments/images/article2.jpg'" alt="" id="walk" attribute="data-hover">
 
     <!-- <img src="../Assignments/images/canvasimage1.webp" alt=""> -->
     <script src="./CanvasScript.js"></script>
