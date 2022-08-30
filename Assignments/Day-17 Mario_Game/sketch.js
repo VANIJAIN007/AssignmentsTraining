@@ -267,6 +267,7 @@ function draw() {
     // Make Mario Jump-Up
     if (keyDown("space")) {
       mario.velocityY = -10;
+      
 
       // Mario Jump Sound
       jumpSound.play();
@@ -328,13 +329,16 @@ function draw() {
     bg.velocityX = 0;
     mario.velocityY = 0;
     mario.velocityX = 0;
+    // container.velocityX=0;
 
     obstaclesGroup.setVelocityXEach(0);
     coinsGroup.setVelocityXEach(0);
     brickGroup.setVelocityXEach(0);
+    containerGroup.setVelocityXEach(0);
 
     brickGroup.setLifetimeEach(-1);
     coinsGroup.setLifetimeEach(-1);
+    containerGroup.setLifetimeEach(-1);
     obstaclesGroup.setLifetimeEach(-1);
 
     mario.changeAnimation("collided", mario_collided);
@@ -384,13 +388,13 @@ function generateCoins() {
 function generateContainer(){
     if(frameCount%80==0){
         var container=createSprite(1200,555,10,40);
-        container.velocityX(-5);
-        container.scale(0.5);
-        // var rand=Math.round(rand(1,2));
         container.y=Math.round(random(1,2));
-        container.add(containerImage);
+        container.addImage(containerImage);
+
+        container.velocityX=-5;
+        container.scale=1;
         container.lifetime=300;
-        containerGroup.add(containerImage);
+        // containerGroup.add(container);
     }
 }
 
@@ -399,11 +403,13 @@ function generateObstacles() {
     var obstacle = createSprite(1200, 555, 10, 40);
     obstacle.velocityX = -5;
     obstacle.scale = 0.1;  
+    
     var rand = Math.round(random(1, 2));
     switch (rand) {
       case 1:
         obstacle.addAnimation("mush", mushObstacleImage);
-        break;
+        
+        break; 
       case 2:
         obstacle.addAnimation("turtle", turtleObstacleImage);
         break;
@@ -421,6 +427,7 @@ function restartGame() {
   obstaclesGroup.destroyEach();
   brickGroup.destroyEach();
   coinsGroup.destroyEach();
+  containerGroup.destroyEach();          
 
   mario.changeAnimation("running", mario_running);
   mario.scale = 0.2;
