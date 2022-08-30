@@ -174,7 +174,7 @@ var restartImg;
 
 function preload() {
   bgImage = loadImage("images/bgnew.jpg");
-  containerImage=loadImage("https://media.istockphoto.com/photos/the-green-pipe-has-a-coin-on-top-and-free-space-for-placing-products-picture-id1313115166?b=1&k=20&m=1313115166&s=170667a&w=0&h=nOtK4cG-mwPfsIw3M8TZeNTeulxhxtfb91V53yb1sTo=");
+  containerImage=loadImage("./images/containerImg.png");
   mario_running = loadAnimation(
     "images/mar1.png",
     "images/mar2.png",
@@ -279,12 +279,14 @@ function draw() {
     // Ground for Mario
     mario.collide(ground);
     ground.visible = false;
+
     generateContainer();
 
     for(var i=0;i<containerGroup.length;i++){
+      
         var temp=containerGroup.get(i);
-        if(temp(isTouching(mario))){
-            mario.collide(temp);
+        if(mario.isTouching(temp)){
+          mario.addImage("./images/mar1.png")
         }
     }
 
@@ -338,7 +340,7 @@ function draw() {
 
     brickGroup.setLifetimeEach(-1);
     coinsGroup.setLifetimeEach(-1);
-    containerGroup.setLifetimeEach(-1);
+    containerGroup.setLifetimeEach(-1); 
     obstaclesGroup.setLifetimeEach(-1);
 
     mario.changeAnimation("collided", mario_collided);
@@ -387,14 +389,13 @@ function generateCoins() {
 
 function generateContainer(){
     if(frameCount%80==0){
-        var container=createSprite(1200,555,10,40);
-        container.y=Math.round(random(1,2));
+        var container=createSprite(1200,452,10,30);
+        // container.y=Math.round(random(1,2));
         container.addImage(containerImage);
-
-        container.velocityX=-5;
-        container.scale=1;
-        container.lifetime=300;
-        // containerGroup.add(container);
+          container.velocityX=-5; 
+            container.scale=1;
+        container.lifetime=250;
+        containerGroup.add(container);
     }
 }
 
@@ -436,3 +437,10 @@ function restartGame() {
 
   restart.visible = false;
 }
+
+// document.addEventListener("keyup",keyUp);
+// function keyUp(){
+//   if(mario.isTouching(obstacle)){
+//     obstacle.scale(0);
+//   }
+// }
