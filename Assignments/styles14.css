@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: inherit;
+  /* background-image: url("./images/success.mp3"); */
 }
 
 h1 {
@@ -38,6 +39,7 @@ h1 {
   top: 85%;
   left: 43%;
   cursor: pointer;
+
 }
 
 .dirt {
@@ -107,4 +109,7 @@ h1 {
 #mole6 {
   top: 82%;
   left: 68%;
+}
+audio{
+  visibility: hidden;
 }
